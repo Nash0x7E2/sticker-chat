@@ -101,19 +101,9 @@ class _GettingStartedPlaceholder extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              ShaderMask(
-                shaderCallback: (rect) => LinearGradient(
-                  colors: [
-                    Colors.purple,
-                    Colors.blueAccent,
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ).createShader(rect),
-                child: Icon(
-                  Icons.chat,
-                  size: 32.0,
-                ),
+              Icon(
+                Icons.chat,
+                size: 32.0,
               ),
               const SizedBox(height: 12.0),
               Text(
