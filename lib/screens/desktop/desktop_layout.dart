@@ -59,12 +59,10 @@ class _DesktopChannelList extends StatelessWidget {
             child: ChannelsBloc(
               child: ChannelListView(
                 onChannelTap: (channel, _) => onChannelTap(channel),
-                filter:
-                    Filter.in_('members', [StreamChat.of(context).user!.id]),
+                filter: Filter.in_(
+                    'members', [StreamChat.of(context).currentUser!.id]),
                 sort: [SortOption('last_message_at')],
-                pagination: PaginationParams(
-                  limit: 30,
-                ),
+                limit: 30,
               ),
             ),
           ),

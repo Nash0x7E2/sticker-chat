@@ -11,11 +11,10 @@ class ChannelListPage extends StatelessWidget {
       ),
       body: ChannelsBloc(
         child: ChannelListView(
-          filter: Filter.in_('members', [StreamChat.of(context).user!.id]),
+          filter:
+              Filter.in_('members', [StreamChat.of(context).currentUser!.id]),
           sort: [SortOption('last_message_at')],
-          pagination: PaginationParams(
-            limit: 30,
-          ),
+          limit: 30,
           channelWidget: Builder(builder: (context) => MessagePage()),
         ),
       ),
