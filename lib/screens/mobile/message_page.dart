@@ -64,8 +64,17 @@ class _MessagePageState extends State<MessagePage> {
         children: <Widget>[
           Expanded(
             child: MessageListView(
-              customAttachmentBuilders: {
-                'animated.sticker': _buildAnimatedMessage,
+              messageBuilder: (
+                BuildContext context,
+                MessageDetails _,
+                List<Message> messages,
+                MessageWidget defaultMessageWidget,
+              ) {
+                return defaultMessageWidget.copyWith(
+                  customAttachmentBuilders: {
+                    'animated.sticker': _buildAnimatedMessage
+                  },
+                );
               },
             ),
           ),
