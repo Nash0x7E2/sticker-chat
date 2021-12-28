@@ -10,9 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  stream_chat_flutter: ^2.0.0-nullsafety.7
-  rive: ^0.7.22
+  cupertino_icons: ^1.0.4
+  stream_chat_flutter: ^3.3.2
+  rive: ^0.8.1
+
+dependency_overrides:
+  visibility_detector: ^0.2.2
 
 dev_dependencies:
   flutter_test:
